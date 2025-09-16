@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { HomePage } from "./pages/HomePage";
+import { PasswordDimenticata } from "./components/PasswordDimenticata";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/password-dimenticata" element={<PasswordDimenticata />} />
       </Routes>
     </BrowserRouter>
   );

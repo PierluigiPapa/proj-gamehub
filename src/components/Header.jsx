@@ -51,15 +51,15 @@ export function Header() {
                 </button>
 
                 {open && (
-                  <ul className="absolute right-0 mt-2 w-48 bg-white rounded-xl overflow-hidden">
+                  <ul className="absolute bg-white -left-2 mt-2 w-44 rounded-xl overflow-hidden">
                     <li>
-                      <Link to="/login" onClick={() => setOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-xl">
+                      <Link to="/login" onClick={() => setOpen(false)} className="block px-4 py-2 text-black hover:bg-blue-300 rounded-t-xl">
                         Login
                       </Link>
                     </li>
                     
                     <li>
-                      <Link to="/register" onClick={() => setOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-xl">
+                      <Link to="/register" onClick={() => setOpen(false)} className="block px-4 py-2 text-black hover:bg-blue-300 rounded-b-xl">
                         Registrati
                       </Link>
                     </li>
