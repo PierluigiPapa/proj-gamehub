@@ -16,32 +16,32 @@ export function Header() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
               <li>
-                <a href="#" className="text-white hover:text-blue-700 block py-2">
+                <Link to="/" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out tr block py-2">
                   Home
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#" className="text-white hover:text-blue-700 block py-2">
+                <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
                   L'azienda
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-white hover:text-blue-700 block py-2">
+                <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
                   Prodotti e Servizi
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-white hover:text-blue-700 block py-2">
+                <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
                   Contatti
                 </a>
               </li>
 
  
               <li className="relative">
-                <button onClick={() => setOpen(!open)} className="flex items-center text-white hover:text-blue-700 py-2">
+                <button onClick={() => setOpen(!open)} className="flex items-center text-white hover:text-ciano transition-colors duration-300 ease-in-out py-2">
                   Area riservata
                   <ChevronDown
                     className={`ml-1 h-4 w-4 transition-transform ${
@@ -53,13 +53,13 @@ export function Header() {
                 {open && (
                   <ul className="absolute right-0 mt-2 w-48 bg-white rounded-xl overflow-hidden">
                     <li>
-                      <Link to="/login" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-xl">
+                      <Link to="/login" onClick={() => setOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-xl">
                         Login
                       </Link>
                     </li>
                     
                     <li>
-                      <Link to="/register" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-xl">
+                      <Link to="/register" onClick={() => setOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-xl">
                         Registrati
                       </Link>
                     </li>

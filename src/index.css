@@ -4,9 +4,11 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(45deg,#0047AB, #102A43);
+  background: linear-gradient(90deg, #082751, #0286df);
 }
 
 @theme {
-  --color-blu: #030027
+  --color-blu: #09152b;
+  --color-ciano: #00b0fc;
+  --color-ciano-2: #00A3B8;
 }
