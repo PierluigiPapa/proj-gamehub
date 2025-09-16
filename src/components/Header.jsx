@@ -10,7 +10,7 @@ export function Header() {
       <nav className="bg-blu border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="self-center text-2xl text-white font-semibold whitespace-nowrap">
-            TechGuard
+            GameHub
           </span>
 
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
