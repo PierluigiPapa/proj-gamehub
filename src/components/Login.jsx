@@ -36,7 +36,7 @@ export function Login() {
                     </Link>
                 </div>
 
-                <button type="submit" className="w-full text-white bg-blu hover:bg-ciano-2 hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <button type="submit" className="w-full text-white bg-blu hover:bg-ciano-2 ease-in-out duration-500 hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                     Accedi
                 </button>
             </form>
