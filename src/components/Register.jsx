@@ -56,9 +56,7 @@ export function Register() {
 
                 <div className="flex items-start justify-center mb-5">
                     <div className="flex items-center h-5">
-                        <input id="terms" type="checkbox"
-                            className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50"
-                        />
+                        <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50"/>
                     </div>
                     <label htmlFor="terms" className="ms-2 text-sm font-medium text-black">
                         Accetto {" "}

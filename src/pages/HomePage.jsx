@@ -1,4 +1,5 @@
 import { Jumbotron } from "../components/Jumbotron";
+import { Newsletter } from "../components/Newsletter";
 import { Statistiche } from "../components/Statistiche";
 
 export function HomePage() {
@@ -7,6 +8,7 @@ export function HomePage() {
 
         <Jumbotron></Jumbotron>
         <Statistiche></Statistiche>
+        <Newsletter></Newsletter>
     
         </>
     )
