@@ -17,12 +17,12 @@ export function Jumbotron() {
                     innovazione a un prezzo imbattibile. Non lasciarti sfuggire l’occasione!
                 </p>
                 
-                <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 opacity-0 animate-fadeIn delay-900">
+                <div className="flex flex-col space-y-4 gap-3 sm:flex-row sm:justify-center sm:space-y-0 opacity-0 animate-fadeIn delay-900">
                     <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blu hover:bg-ciano hover:text-black ease-in-out duration-500">
                         Scopri di più
                     </a>
                     
-                    <a href="#" className="py-3 px-5 sm:ms-4 text-sm font-medium text-black bg-slate-300 rounded-lg hover:bg-slate-600 ease-in-out duration-500">
+                    <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black bg-slate-300 rounded-lg hover:bg-slate-600 ease-in-out duration-500">
                         Acquista ora
                     </a>  
                 </div>

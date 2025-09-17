@@ -39,6 +39,14 @@ export function Login() {
                 <button type="submit" className="w-full text-white bg-blu hover:bg-ciano-2 ease-in-out duration-500 hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                     Accedi
                 </button>
+
+                <div className="flex justify-start items-center mt-5">
+                    <span className="text-sm font-medium text-black mr-1">Non sei ancora registrato?</span>
+                    
+                    <Link to="/register" className="text-orange-600 font-bold text-sm hover:underline">
+                        Crea un account
+                    </Link>
+                </div>
             </form>
         </div>
         </>
