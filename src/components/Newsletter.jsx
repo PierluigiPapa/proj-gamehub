@@ -23,7 +23,7 @@ export function Newsletter() {
             </div>
 
             <div className="flex justify-center items-center h-5">
-                <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50"/>
+                <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 mr-1"/>
                 <p className="text-sm font-semibold text-center">Compilando questo modulo acconsento al trattamento dei dati personali. Consulta la pagina <span className="text-white font-bold underline">Privacy Policy</span>.
                 </p>
             </div> 
