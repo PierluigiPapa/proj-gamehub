@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import { faSquareFacebook, faSquareXTwitter, faSquareInstagram, faSquareYoutube, faTiktok, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export function Footer() {
@@ -13,10 +14,10 @@ export function Footer() {
                             <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Home</a>
                         </li>
                         <li>
-                            <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">L'azienda</a>
+                            <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Chi siamo</a>
                         </li>
                         <li>
-                            <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Prodotti e Servizi</a>
+                            <Link to="/prodotti" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Prodotti</Link>
                         </li>
                         <li>
                             <a href="#" className="text-white hover:text-ciano transition duration-300">Contatti</a>

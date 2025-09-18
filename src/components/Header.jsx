@@ -23,14 +23,14 @@ export function Header() {
 
               <li>
                 <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
-                  L'azienda
+                  Chi siamo
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
-                  Prodotti e Servizi
-                </a>
+                <Link to="/prodotti" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
+                  Prodotti
+                </Link>
               </li>
 
               <li>

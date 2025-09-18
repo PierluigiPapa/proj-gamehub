@@ -4,7 +4,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(180deg, #082751, #0286df);
+  background: linear-gradient(90deg, #082751, #0286df);
 }
 
 @theme {
@@ -12,6 +12,8 @@ body {
   --color-ciano: #00b0fc;
   --color-ciano-2: #00A3B8;
   --color-switch: #DF8268;
+  --color-giallo-1: #fcefb4;
+  --color-giallo-2: #ffd100; 
 }
 
 @keyframes fadeIn {
