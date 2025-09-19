@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 
 export function Login() {
     return (
         <>
+        <Header></Header>
         <div className="flex items-center justify-center min-h-screen">
             <form className="max-w-sm w-full mx-auto p-6 rounded-xl bg-white/90 shadow-lg">
                 
@@ -49,6 +52,7 @@ export function Login() {
                 </div>
             </form>
         </div>
+        <Footer></Footer>
         </>
         
     );

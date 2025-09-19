@@ -9,7 +9,6 @@ import { ProdottiPage } from "./pages/ProdottiPage";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/prodotti" element={<ProdottiPage />} />

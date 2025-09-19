@@ -28,7 +28,7 @@ export function Footer() {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
 
                 <div className="flex justify-between items-center">
-                    <span className="block text-sm sm:text-center text-white">© 2023 GameHub. Tutti i diritti riservati.</span>
+                    <span className="block text-sm sm:text-center text-white">© 2025 GameHub. Tutti i diritti riservati.</span>
                     <a href="#" className="block text-sm sm:text-center text-white hover:text-ciano transition duration-300">Torna su</a>
 
                     <div className="flex gap-4 text-white text-2xl">
@@ -37,9 +37,7 @@ export function Footer() {
                         <a href="#"><FontAwesomeIcon icon={faSquareInstagram} className="text-4xl hover:text-ciano transition duration-300" /></a>
                         <a href="#"><FontAwesomeIcon icon={faSquareYoutube} className="text-4xl hover:text-ciano transition duration-300" /></a>
                         <a href="#"><FontAwesomeIcon icon={faTiktok} className="text-4xl hover:text-ciano transition duration-300" /></a>
-                        <a href="#"><FontAwesomeIcon icon={faSquareInstagram} className="text-4xl hover:text-ciano transition duration-300" /></a>
                         <a href="#"><FontAwesomeIcon icon={faDiscord} className="text-4xl hover:text-ciano transition duration-300" /></a>
-                        
                     </div>
                 </div>
             </div>
