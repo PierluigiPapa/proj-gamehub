@@ -10,14 +10,14 @@ export function Register() {
                         <label htmlFor="nome" className="block mb-2 text-sm font-medium text-black">
                             Nome
                         </label>
-                        <input type="text" id="nome" placeholder="Pierluigi" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="text" id="nome" placeholder="Pierluigi" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
 
                     <div>
                         <label htmlFor="cognome" className="block mb-2 text-sm font-medium text-black">
                             Cognome
                         </label>
-                        <input type="text" id="cognome" placeholder="Papa" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="text" id="cognome" placeholder="Papa" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
                 </div>
 
@@ -26,14 +26,14 @@ export function Register() {
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-black">
                             Email
                         </label>
-                        <input type="email" id="email" placeholder="pierluigi@email.com" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="email" id="email" placeholder="pierluigi@email.com" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
 
                     <div>
                         <label htmlFor="nascita" className="block mb-2 text-sm font-medium text-black">
                             Data di nascita
                         </label>
-                        <input type="date" id="nascita" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="date" id="nascita" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@ export function Register() {
                         <label htmlFor="password" className="block mb-2 text-sm font-medium text-black">
                             Password*
                         </label>
-                        <input type="password" id="password" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="password" id="password" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
                     
 
@@ -50,7 +50,7 @@ export function Register() {
                         <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-black">
                             Ripeti password*
                         </label>
-                        <input type="password" id="repeat-password" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                        <input type="password" id="repeat-password" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                     </div>
                 </div>
 

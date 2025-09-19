@@ -13,14 +13,14 @@ export function Login() {
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-black">
                         Email
                     </label>
-                    <input type="email" id="email" placeholder="mario@email.com" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                    <input type="email" id="email" placeholder="mario@email.com" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                 </div>
 
                 <div className="mb-5">
                     <label htmlFor="password" className="block mb-2 text-sm font-medium text-black">
                         Password
                     </label>
-                    <input type="password" id="password" placeholder="" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5"/>
+                    <input type="password" id="password" placeholder="" className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-2 focus:ring-ciano-2 focus:outline-none"/>
                 </div>
 
                 <div className="flex justify-between items-center mb-5">

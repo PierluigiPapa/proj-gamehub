@@ -7,13 +7,13 @@ export function SearchBar({ search, setSearch, filter, setFilter, consoleFilter,
           placeholder="Cerca un prodotto..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 px-4 py-2 rounded-xl bg-gray-300 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black"
+          className="flex-1 px-4 py-2 rounded-xl bg-gray-300 border border-gray-300 focus:outline-none  focus:shadow-xl"
         />
 
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="px-4 py-2 rounded-xl border bg-gray-300 border-gray-300"
+          className="px-4 py-2 rounded-xl  bg-gray-300 border-gray-300"
         >
           <option value="Tutti">Tutti</option>
           <option value="Console">Console</option>
@@ -22,12 +22,11 @@ export function SearchBar({ search, setSearch, filter, setFilter, consoleFilter,
           <option value="Periferiche">Periferiche</option>
         </select>
 
-        {/* Mostra il filtro console solo se categoria = Giochi */}
         {filter === "Giochi" && (
           <select
             value={consoleFilter}
             onChange={(e) => setConsoleFilter(e.target.value)}
-            className="px-4 py-2 rounded-xl border bg-gray-300 border-gray-300"
+            className="px-4 py-2 rounded-xl  bg-gray-300 border-gray-300"
           >
             <option value="Tutte">Tutte le console</option>
             <option value="PlayStation 5">PlayStation 5</option>
