@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { HomePage } from "./pages/HomePage";
 import { PasswordDimenticata } from "./components/PasswordDimenticata";
 import { ProdottiPage } from "./pages/ProdottiPage";
+import { BackEndPage } from "./pages/BackEndPage";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/password-dimenticata" element={<PasswordDimenticata />} />
+        <Route path="/back-end" element={<BackEndPage />} />
       </Routes>
     </BrowserRouter>
   );

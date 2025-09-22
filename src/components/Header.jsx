@@ -22,9 +22,9 @@ export function Header() {
               </li>
 
               <li>
-                <a href="#" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
-                  Chi siamo
-                </a>
+                <Link to="/chi-siamo" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
+                  Chi-siamo
+                </Link>
               </li>
 
               <li>

@@ -14,7 +14,7 @@ export function Footer() {
                             <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Home</a>
                         </li>
                         <li>
-                            <a href="#" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Chi siamo</a>
+                            <Link to="/chi-siamo" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Chi siamo</Link>
                         </li>
                         <li>
                             <Link to="/prodotti" className="text-white hover:text-ciano transition duration-300 me-4 md:me-6">Prodotti</Link>
