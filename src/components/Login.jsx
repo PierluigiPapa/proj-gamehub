@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { useState } from "react";
+import { Breadcrumb } from "./Breadcrumb";
 
 export function Login() {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ export function Login() {
 
         if (email === "test@email.com" && password === "1234") {
             localStorage.setItem("isAuthenticated", "true");
-            navigate("/back-end");
+            navigate("/dashboard");
         } else {
             alert("Credenziali non valide");
         }
@@ -21,7 +22,6 @@ export function Login() {
 
     return (
         <>
-            <Header />
             <div className="flex items-center justify-center min-h-screen">
                 <form 
                     className="max-w-sm w-full mx-auto p-6 rounded-xl bg-white/90 shadow-lg"
@@ -88,7 +88,6 @@ export function Login() {
                     </div>
                 </form>
             </div>
-            <Footer />
         </>
     );
 }

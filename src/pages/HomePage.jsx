@@ -7,12 +7,9 @@ import { Statistiche } from "../components/Statistiche";
 export function HomePage() {
     return (
         <>
-        <Header></Header>
         <Jumbotron></Jumbotron>
         <Statistiche></Statistiche>
         <Newsletter></Newsletter>
-        <Footer></Footer>
-    
         </>
     )
 }

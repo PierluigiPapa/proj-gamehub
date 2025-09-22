@@ -4,7 +4,6 @@ import { Header } from "./Header";
 export function Register() {
     return (
         <>
-        <Header></Header>
         <div className="flex items-center justify-center min-h-screen">
             <form className="max-w-3xl w-full mx-auto p-6 rounded-xl bg-white/90 shadow-lg">
                 
@@ -76,7 +75,6 @@ export function Register() {
                 </button>
             </form>
         </div>
-        <Footer></Footer>
         
         </>
         
