@@ -1,15 +1,75 @@
 import { useState } from "react";
 import { Breadcrumb } from "../components/Breadcrumb";
-import { ArrowUpFromLine, Eye } from "lucide-react";
+import { ArrowUpFromLine, Eye, Search } from "lucide-react";
+import { InformazioniAccount } from "../components/InformazioniAccount";
 
 export function ProfilePage() {
-  const [activeTab, setActiveTab] = useState("info");
+    const [activeTab, setActiveTab] = useState("info");
+    
+    const tabs = [
+        { id: "info", label: "Info personali" },
+        { id: "destinazioni", label: "Destinazioni" },
+        { id: "contatti", label: "Contatti" },
+    ];
+    
+    const [gamingStores, setGamingStores] = useState([
+    {
+      numero: 1,
+      descrizione: "GameZone Online - Console & Accessori",
+      indirizzo: "Via Appia Nuova 123",
+      localita: "Roma",
+      telefono: "+39 06 1234567",
+      email: "info@gamezone.it",
+      preferiti: true,
+    },
+    {
+      numero: 2,
+      descrizione: "PixelShop - PC Gaming & Componenti",
+      indirizzo: "Corso Vittorio Emanuele 45",
+      localita: "Milano",
+      telefono: "+39 02 7654321",
+      email: "support@pixelshop.it",
+      preferiti: false,
+    },
+    {
+      numero: 3,
+      descrizione: "LevelUp Store - Giochi Digitali",
+      indirizzo: "Rue de Rivoli 87",
+      localita: "Parigi",
+      telefono: "+33 1 44556677",
+      email: "contact@levelup.fr",
+      preferiti: true,
+    },
+    {
+      numero: 4,
+      descrizione: "NextGen Gaming - Accessori VR",
+      indirizzo: "Oxford Street 250",
+      localita: "Londra",
+      telefono: "+44 20 79460000",
+      email: "sales@nextgenuk.co.uk",
+      preferiti: false,
+    },
+    {
+      numero: 5,
+      descrizione: "Gamer's Paradise - Retrogaming",
+      indirizzo: "Gran Via 102",
+      localita: "Madrid",
+      telefono: "+34 91 9876543",
+      email: "paradise@gamers.es",
+      preferiti: true,
+    },
+  ]);
 
-  const tabs = [
-    { id: "info", label: "Info personali" },
-    { id: "destinazioni", label: "Destinazioni" },
-    { id: "contatti", label: "Contatti" },
-  ];
+  const togglePreferito = (numero) => {
+    setGamingStores((prevStores) =>
+      prevStores.map((store) =>
+        store.numero === numero
+          ? { ...store, preferiti: !store.preferiti }
+          : store
+      )
+    );
+  };
+
 
   return (
     <>
@@ -35,9 +95,7 @@ export function ProfilePage() {
 
       {activeTab === "info" && (
         <div className="flex justify-start items-start mt-6 gap-6 px-8 mb-6">
-          {/* Colonna sinistra */}
           <div className="flex flex-col gap-6">
-            {/* Foto profilo */}
             <div className="bg-white w-64 h-72 rounded-2xl shadow-md flex-shrink-0">
               <h2 className="font-bold text-xl my-5 mx-5">Foto profilo</h2>
               <div className="flex justify-center items-center">
@@ -51,7 +109,6 @@ export function ProfilePage() {
               </div>
             </div>
 
-            {/* Colore interfaccia */}
             <div className="bg-white w-64 rounded-2xl shadow-md p-5 flex flex-col items-center">
               <h2 className="font-bold text-xl my-4 text-start self-start">
                 Colore interfaccia
@@ -69,120 +126,9 @@ export function ProfilePage() {
               </div>
             </div>
           </div>
-
-          {/* Colonna centrale - informazioni account */}
-          <div className="flex-[1.5]">
-            <form className="p-6 rounded-xl bg-white/90 shadow-lg mb-6">
-              <h2 className="text-2xl font-bold mb-6 text-black text-start">
-                Informazioni account
-              </h2>
-
-              <div className="grid grid-cols-2 gap-4 mb-5">
-                <div>
-                  <label htmlFor="nome" className="block mb-2 text-sm font-medium text-black">
-                    Nome*
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    placeholder="Pierluigi"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="cognome" className="block mb-2 text-sm font-medium text-black">
-                    Cognome*
-                  </label>
-                  <input
-                    type="text"
-                    id="cognome"
-                    placeholder="Papa"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-5">
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-black">
-                  Email*
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="pierluigi@email.com"
-                  className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-5">
-                <div>
-                  <label htmlFor="regione" className="block mb-2 text-sm font-medium text-black">
-                    Regione
-                  </label>
-                  <input
-                    type="text"
-                    id="regione"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="cap" className="block mb-2 text-sm font-medium text-black">
-                    CAP
-                  </label>
-                  <input
-                    type="text"
-                    id="cap"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-5">
-                <div>
-                  <label htmlFor="provincia" className="block mb-2 text-sm font-medium text-black">
-                    Provincia
-                  </label>
-                  <input
-                    type="text"
-                    id="provincia"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="citta" className="block mb-2 text-sm font-medium text-black">
-                    Città
-                  </label>
-                  <input
-                    type="text"
-                    id="citta"
-                    className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-5">
-                <label htmlFor="indirizzo" className="block mb-2 text-sm font-medium text-black">
-                  Indirizzo
-                </label>
-                <input
-                  type="text"
-                  id="indirizzo"
-                  placeholder="Via Grottaglie, 1"
-                  className="shadow-xs bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 focus:ring-1 focus:ring-black focus:outline-none"
-                />
-              </div>
-
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="bg-gray-300 text-black px-24 py-4 font-semibold rounded-lg"
-                >
-                  Invia
-                </button>
-              </div>
-            </form>
-          </div>
-
+          
+          <InformazioniAccount></InformazioniAccount>
+          
           <div className="flex-1">
             <form className="p-6 rounded-xl bg-white/90 shadow-lg">
               <h2 className="text-2xl font-bold mb-6 text-black text-start">
@@ -231,6 +177,68 @@ export function ProfilePage() {
           </div>
         </div>
       )}
+      
+      {activeTab === "destinazioni" && (
+        <div className="flex flex-col gap-6 mt-6 px-8 mb-6">
+            <div className="flex items-center gap-6">
+                <div className="bg-white w-80 h-24 rounded-2xl  flex justify-center items-center">
+                    <button className="bg-ciano text-white font-semibold px-8 py-4 rounded-xl">
+                        Nuova destinazione
+                    </button>
+                </div>
+                
+               <div className="relative bg-white p-4 rounded-2xl">
+                    <Search className="absolute left-7 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <input type="text" placeholder="cerca codice"
+                        className="w-[500px] pl-10 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg h-10"
+                    />
+                </div>
+            </div>
+
+            <div className="overflow-x-auto bg-white rounded-2xl ml-[335px]">
+                <table className="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">#NUMERO</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">DESCRIZIONE</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">INDIRIZZO</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">LOCALITÀ</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">TELEFONO</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">EMAIL</th>
+                            <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">PREFERITI</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody className="divide-y divide-gray-200">
+                        {gamingStores.map((store) => (
+                            <tr key={store.numero}>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.numero}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.descrizione}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.indirizzo}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.localita}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.telefono}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">{store.email}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900">
+                                    <label className="flex items-center space-x-2">
+                                    <input
+                                        type="checkbox"
+                                        checked={store.preferiti}
+                                        onChange={() => togglePreferito(store.numero)}
+                                        className="h-4 w-4 text-ciano border-gray-300 rounded"
+                                    />
+                                    <span className="text-gray-500">Preferito</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    )}
+
+
+
     </>
   );
 }
