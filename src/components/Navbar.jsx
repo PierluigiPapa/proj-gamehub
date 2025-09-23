@@ -26,7 +26,7 @@ export function Navbar() {
         <div className="flex items-center space-x-3">
           <User className="w-12 h-12 bg-blue-500 rounded-full text-gray-300 p-2" />
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold">Pierluigi Papa</span>
+            <span className="text-sm font-semibold whitespace-nowrap">Pierluigi Papa</span>
             <span className="text-xs text-gray-500">Amministratore</span>
           </div>
         </div>
@@ -41,42 +41,42 @@ export function Navbar() {
             </li>
 
             <li>
-              <Link to="/ordini" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
+              <Link to="/dashboard/ordini" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
                 <Clipboard className="w-4 h-4 group-hover:text-ciano-2 transition-colors" /> 
                 <span className="group-hover:text-black transition-colors">Ordini</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/preventivi" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
+              <Link to="/dashboard/preventivi" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
                 <FileText className="w-4 h-4 group-hover:text-ciano-2 transition-colors" /> 
                 <span className="group-hover:text-black transition-colors">Preventivi</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/statistiche" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
+              <Link to="/dashboard/statistiche" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
                 <BarChart2 className="w-4 h-4 group-hover:text-ciano-2 transition-colors"/> 
                 <span className="group-hover:text-black transition-colors">Statistiche</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/documenti" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
+              <Link to="/dashboard/documenti" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
                 <File className="w-4 h-4 group-hover:text-ciano-2 transition-colors" /> 
                 <span className="group-hover:text-black transition-colors">Documenti</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/supporto" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
+              <Link to="/dashboard/supporto" className="flex items-center space-x-2 text-md group font-medium text-gray-400">
                 <LifeBuoy className="w-4 h-4 group-hover:text-ciano-2 transition-colors" /> 
                 <span className="group-hover:text-black transition-colors">Supporto</span>
               </Link>
             </li>
           </ul>
 
-          <div className="flex items-center border-gray-300 border-2 rounded-full px-3 h-10 ml-20 relative">
+          <div className="flex items-center border-gray-300 border-2 rounded-full px-3 h-10 ml-60 relative">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-black w-4 h-4"/>
               <input 

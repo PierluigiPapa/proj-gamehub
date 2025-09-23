@@ -1,6 +1,3 @@
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-
 export function Register() {
     return (
         <>
@@ -75,8 +72,6 @@ export function Register() {
                 </button>
             </form>
         </div>
-        
         </>
-        
     );
 }
