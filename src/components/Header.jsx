@@ -23,7 +23,7 @@ export function Header() {
 
               <li>
                 <Link to="/chi-siamo" className="text-white hover:text-ciano transition-colors duration-300 ease-in-out block py-2">
-                  Chi-siamo
+                  Chi siamo
                 </Link>
               </li>
 
