@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Check } from "lucide-react";
 
-export function DropdownFilter({
+export function SelectComponent({
   options = [],
   years = [],
   months = [],
@@ -35,18 +35,17 @@ export function DropdownFilter({
   const handleYearSelect = (year) => {
     setSelectedYear(year);
     setYearOpen(false);
-    setSelectedOption(""); // Deseleziona l'opzione tempo
+    setSelectedOption("");
   };
 
   const handleMonthSelect = (month) => {
     setSelectedMonth(month);
     setMonthOpen(false);
-    setSelectedOption(""); // Deseleziona l'opzione tempo
+    setSelectedOption("");
   };
 
   return (
     <div className="flex flex-col w-64 relative z-50">
-      {/* Dropdown principale */}
       <div
         className="bg-gray-50 border border-gray-300 rounded-2xl h-10 px-4 flex items-center justify-between cursor-pointer"
         onClick={toggleDropdown}
@@ -63,7 +62,6 @@ export function DropdownFilter({
 
       {dropdownOpen && (
         <ul className="absolute w-full bg-white mt-2 rounded-2xl shadow-lg z-50 flex flex-col p-2">
-          {/* Opzioni intervallo di tempo */}
           {options.map((option, idx) => (
             <li
               key={idx}
@@ -75,9 +73,7 @@ export function DropdownFilter({
             </li>
           ))}
 
-          {/* Selezione anno/mese */}
           <div className="border-t mt-2 pt-2 flex gap-2">
-            {/* Anno */}
             <div className="relative flex-1">
               <div
                 className="bg-gray-50 border-2 border-blue-600 rounded-lg px-2 py-1 flex items-center justify-between cursor-pointer"
@@ -102,7 +98,6 @@ export function DropdownFilter({
               )}
             </div>
 
-            {/* Mese */}
             <div className="relative flex-1">
               <div
                 className="bg-gray-50 border-2 border-blue-600 rounded-lg px-2 py-1 flex items-center justify-between cursor-pointer"
