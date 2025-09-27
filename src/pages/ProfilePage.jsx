@@ -175,7 +175,6 @@ export function ProfilePage() {
 
       {activeTab === "info" && (
         <div className="flex justify-start items-start mt-6 gap-6 px-8 mb-6">
-          {/* Foto profilo e colore interfaccia */}
           <div className="flex flex-col gap-6">
             <div className="bg-white w-64 h-72 rounded-2xl flex-shrink-0">
               <h2 className="font-bold text-xl my-5 mx-5">Foto profilo</h2>

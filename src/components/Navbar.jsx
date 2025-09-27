@@ -92,7 +92,7 @@ export function Navbar() {
             </button>
 
             <div className="relative" ref={dropdownRef}>
-              <button onClick={() => setIsOpen(!isOpen)} className="p-1 rounded-full bg-blue-500">
+              <button onClick={() => setIsOpen(!isOpen)} className="p-1 rounded-full bg-blue-500 mt-1">
                 <UserPen className="w-6 h-6 text-gray-300" />
               </button>
 
