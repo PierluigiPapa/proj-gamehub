@@ -8,6 +8,11 @@ import { ProfilePage } from "./pages/ProfilePage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { OrdiniPage } from "./pages/OrdiniPage";
+import { PreventiviPage } from "./pages/PreventiviPage";
+import { StatistichePage } from "./pages/StatistichePage";
+import { DocumentiPage } from "./pages/DocumentiPage";
+import { SupportoPage } from "./pages/SupportoPage";
 
 function App() {
   return (
@@ -33,6 +38,11 @@ function Layout() {
 
         <Route path="/dashboard" element={<DashboardPage />}>
           <Route path="profilo" element={<ProfilePage />} />
+          <Route path="ordini" element={<OrdiniPage />} />
+          <Route path="preventivi" element={<PreventiviPage />} />
+          <Route path="statistiche" element={<StatistichePage />} />
+          <Route path="documenti" element={<DocumentiPage />} />
+          <Route path="supporto" element={<SupportoPage />} />
         </Route>
       </Routes>
       {!hideLayout && <Footer />}
