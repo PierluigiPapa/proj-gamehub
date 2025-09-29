@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { ChevronDown, ChevronUp, Check } from "lucide-react";
+import { FooterDashboard } from "../components/FooterDashboard";
 
 const tabs = [
   { id: "preventivi", label: "Preventivi" },
@@ -233,7 +234,7 @@ export function PreventiviPage() {
           </div>
         </div>
 
-        <div className="overflow-x-auto bg-white rounded-2xl ml-[335px] -mt-12">
+        <div className="overflow-x-auto bg-white rounded-2xl ml-[335px] -mt-12 px-5">
           <table className="min-w-full divide-y divide-gray-400">
             <thead>
               <tr>
@@ -285,6 +286,7 @@ export function PreventiviPage() {
           </table>
         </div>
       </div>
+      <FooterDashboard></FooterDashboard>
     </>
   );
 }

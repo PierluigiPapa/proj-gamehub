@@ -4,6 +4,7 @@ import { ArrowUpFromLine, Eye, Search } from "lucide-react";
 import { InformazioniAccount } from "../components/InformazioniAccount";
 import { ModalInformazioniAccount } from "../components/ModalInformazioniAccount";
 import { ModalNuovoContatto } from "../components/ModalNuovoContatto";
+import { FooterDashboard } from "../components/FooterDashboard";
 
 export function ProfilePage() {
   const [activeTab, setActiveTab] = useState("info");
@@ -398,6 +399,8 @@ export function ProfilePage() {
         isOpen={isModalNuovoContattoOpen}
         onClose={() => setIsModalNuovoContattoOpen(false)}
       />
+
+      <FooterDashboard></FooterDashboard>
     </>
   );
 }

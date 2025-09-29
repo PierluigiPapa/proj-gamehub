@@ -21,7 +21,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white shadow px-6 py-4 flex justify-between items-center">
+    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       <div className="flex items-center space-x-16">
         <div className="flex items-center space-x-3">
           <User className="w-12 h-12 bg-blue-500 rounded-full text-gray-300 p-2" />

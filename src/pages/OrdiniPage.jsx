@@ -3,6 +3,7 @@ import { Breadcrumb } from "../components/Breadcrumb";
 
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { SelectComponent } from "../components/SelectComponent";
+import { FooterDashboard } from "../components/FooterDashboard";
 
 export function OrdiniPage() {
     const tabs = [
@@ -189,6 +190,7 @@ export function OrdiniPage() {
           </table>
         </div>
       </div>
+      <FooterDashboard></FooterDashboard>
     </>
   );
 }
