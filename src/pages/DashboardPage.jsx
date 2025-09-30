@@ -71,10 +71,37 @@ export function DashboardPage() {
               <button className="bg-gray-300 text-black font-semibold w-full px-8 py-4 rounded-xl mt-5">Nuovo preventivo</button>
             </div>
           </div>
-          {/* Altri widget... (puoi copiare il resto della colonna sinistra dal tuo codice originale) */}
-        </div>
 
-        {/* Colonna destra: tabelle */}
+
+          <div className="bg-white w-80 h-56 rounded-2xl flex flex-col justify-between px-4 py-4">
+            <div className="flex flex-col items-center">
+              <p className="text-black text-2xl font-bold my-2 self-start">Richiedi</p>
+              <button className="bg-gray-300 text-black font-semibold w-full px-8 py-4 rounded-xl mt-2">Ritiro riparazioni</button>
+              <button className="bg-gray-300 text-black font-semibold w-full px-8 py-4 rounded-xl mt-5">Materiale informativo</button>
+            </div>
+          </div>
+
+          <div className="bg-white w-80 h-32 rounded-2xl flex flex-col justify-center px-4 py-4">
+            <div className="flex items-center space-x-3">
+              <Euro size={40} className="bg-gray-200 text-black rounded-full p-2" />
+              <div className="flex flex-col">
+                <span className="text-gray-400 text-sm">DTT da fatturare</span>
+                <h3 className="text-black font-bold text-2xl">€642.39</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white w-80 h-32 rounded-2xl flex flex-col justify-center px-4 py-4">
+            <div className="flex items-center space-x-3">
+              <div className="flex flex-col">
+                <span className="text-gray-400 text-sm">Totale ordini da evadere</span>
+                <h3 className="text-black font-bold text-2xl">$14274.32</h3>
+                <p className="text-gray-400 text-sm"><span className="text-green-600 font-bold text-sm">+23%</span> mese scorso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="grid grid-cols-2 gap-6">
           {tables.map((table, index) => (
             <div key={index} className="bg-white w-[40rem] rounded-2xl shadow p-4 relative">
