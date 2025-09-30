@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Breadcrumb } from "../components/Breadcrumb";
-
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { SelectComponent } from "../components/SelectComponent";
 import { FooterDashboard } from "../components/FooterDashboard";
 
 export function OrdiniPage() {
+    useEffect(() => {
+        document.body.classList.add("dashboard-body");
+        return () => {
+            document.body.classList.remove("dashboard-body");
+        };
+    }, []);
+
     const tabs = [
         { id: "ordini-attivi", label: "Ordini attivi" },
         { id: "ordini-bloccati", label: "Ordini bloccati" },

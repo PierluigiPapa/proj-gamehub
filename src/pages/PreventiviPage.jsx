@@ -1,22 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { ChevronDown, ChevronUp, Check } from "lucide-react";
 import { FooterDashboard } from "../components/FooterDashboard";
 
-const tabs = [
-  { id: "preventivi", label: "Preventivi" },
-  { id: "preventivi-annullati", label: "Preventivi annullati" },
-];
-
-const initialOrders = [
-  { numero: 1001, riferimento: "Mario Rossi", qta: 3, dataCreazione: "2025-09-26", dataPartenza: "2025-09-27", imponibile: 155.97 },
-  { numero: 1002, riferimento: "Luigi Bianchi", qta: 1, dataCreazione: "2025-09-24", dataPartenza: "2025-09-25", imponibile: 69.99 },
-  { numero: 1003, riferimento: "Carla Verdi", qta: 5, dataCreazione: "2025-09-21", dataPartenza: "2025-09-22", imponibile: 329.5 },
-  { numero: 1004, riferimento: "Anna Neri", qta: 2, dataCreazione: "2025-09-19", dataPartenza: "2025-09-20", imponibile: 99.98 },
-  { numero: 1005, riferimento: "Marco Gialli", qta: 1, dataCreazione: "2025-09-15", dataPartenza: "2025-09-16", imponibile: 45.0 },
-];
-
 export function PreventiviPage() {
+  useEffect(() => {
+    document.body.classList.add("dashboard-body");
+    return () => {
+      document.body.classList.remove("dashboard-body");
+    };
+  }, []);
+  
+  const tabs = [
+    { id: "preventivi", label: "Preventivi" },
+    { id: "preventivi-annullati", label: "Preventivi annullati" },
+  ];
+
+  const initialOrders = [
+    { numero: 1001, riferimento: "Mario Rossi", qta: 3, dataCreazione: "2025-09-26", dataPartenza: "2025-09-27", imponibile: 155.97 },
+    { numero: 1002, riferimento: "Luigi Bianchi", qta: 1, dataCreazione: "2025-09-24", dataPartenza: "2025-09-25", imponibile: 69.99 },
+    { numero: 1003, riferimento: "Carla Verdi", qta: 5, dataCreazione: "2025-09-21", dataPartenza: "2025-09-22", imponibile: 329.5 },
+    { numero: 1004, riferimento: "Anna Neri", qta: 2, dataCreazione: "2025-09-19", dataPartenza: "2025-09-20", imponibile: 99.98 },
+    { numero: 1005, riferimento: "Marco Gialli", qta: 1, dataCreazione: "2025-09-15", dataPartenza: "2025-09-16", imponibile: 45.0 },
+  ];
+  
   const [activeTab, setActiveTab] = useState("ordini-attivi");
   const [orders] = useState(initialOrders);
 

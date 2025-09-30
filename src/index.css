@@ -9,7 +9,7 @@ body {
 
 body.dashboard-body {
   font-family: "Roboto", sans-serif;
-  background: #F5F5F5;
+  background: #F5F5F5 !important;
 }
 
 

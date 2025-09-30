@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { SelectYearComponent } from "../components/SelectYearComponent";
 import { PackageOpen, Euro, ChevronUp } from "lucide-react";
@@ -16,6 +16,14 @@ import {
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export function StatistichePage() {
+  
+  useEffect(() => {
+    document.body.classList.add("dashboard-body");
+    return () => {
+      document.body.classList.remove("dashboard-body");
+    };
+  }, []);
+
   const statsProduct = [
     { prodotto: "PlayStation 5", pezzi2025: 75, pezzi2024: 60, quantita2025: 45000, quantita2024: 36000, percentuale: 25 },
     { prodotto: "Xbox Series X", pezzi2025: 50, pezzi2024: 55, quantita2025: 35000, quantita2024: 38500, percentuale: -9 },
