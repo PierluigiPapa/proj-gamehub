@@ -37,7 +37,6 @@ export function Navbar() {
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      {/* Profilo e nome utente */}
       <div className="flex items-center space-x-16">
         <div className="flex items-center space-x-3">
           <User className="w-12 h-12 bg-blue-500 rounded-full text-gray-300 p-2" />
@@ -47,7 +46,6 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Menu principale */}
         <div className="flex items-center space-x-8">
           <ul className="flex space-x-6 list-none m-0 p-0">
             <li>
@@ -106,7 +104,6 @@ export function Navbar() {
             </li>
           </ul>
 
-          {/* Ricerca */}
           <div className="flex items-center border-gray-300 border-2 rounded-full px-3 h-10 ml-60 relative">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-black w-4 h-4" />
@@ -117,7 +114,6 @@ export function Navbar() {
               />
             </div>
 
-            {/* Notifiche */}
             <div className="relative" ref={notificationsRef}>
               <button 
                 onClick={handleBellClick} 
@@ -130,15 +126,20 @@ export function Navbar() {
               </button>
 
               {isNotificationsOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg py-2 z-50">
-                  <p className="px-4 py-2 text-sm text-gray-700 font-medium">Notifiche</p>
-                  <hr className="my-1" />
-                  <p className="px-4 py-2 text-sm text-gray-500">Nessuna nuova notifica</p>
+                <div className="absolute right-0 mt-7 w-64 bg-white rounded-lg py-2 z-50">
+                  <div className="flex flex-col">
+                    <div className="flex flex-col px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                      <div className="flex items-center">
+                        Hai creato un nuovo ordine
+                        <span className="inline-block w-3 h-3 bg-ciano-2 rounded-full ml-2"></span>
+                      </div>
+                    <span className="text-xs text-gray-400 mt-1">10 minuti fa</span>
+                  </div>
                 </div>
+              </div>
               )}
             </div>
 
-            {/* Profilo */}
             <div className="relative ml-3" ref={profileRef}>
               <button 
                 onClick={() => setIsProfileOpen(!isProfileOpen)} 
