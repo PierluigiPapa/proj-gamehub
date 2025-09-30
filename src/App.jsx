@@ -13,7 +13,6 @@ import { PreventiviPage } from "./pages/PreventiviPage";
 import { StatistichePage } from "./pages/StatistichePage";
 import { DocumentiPage } from "./pages/DocumentiPage";
 import { SupportoPage } from "./pages/SupportoPage";
-import { FooterDashboard } from "./components/FooterDashboard";
 
 function App() {
   return (

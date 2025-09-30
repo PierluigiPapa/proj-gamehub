@@ -99,7 +99,7 @@ export function StatistichePage() {
 
       <div className="flex flex-col gap-6 mt-6 px-8 mb-6">
         <div className="flex items-center gap-3">
-          <span className="text-black font-bold">Anno accademico:</span>
+          <span className="text-black font-bold">Anno visualizzazione:</span>
           <SelectYearComponent
             options={yearOptions}
             selectedOption={selectedYear}
